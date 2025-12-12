@@ -1,0 +1,73 @@
+===============================
+ Linux Assignment Command Guide
+===============================
+
+COMMAND:
+    mkdir test_dir
+EXPLANATION:
+    Creates a directory named test_dir.
+
+COMMAND:
+    cd test_dir
+EXPLANATION:
+    Enters the directory test_dir.
+
+COMMAND:
+    touch example.txt
+EXPLANATION:
+    Creates an empty file named example.txt.
+
+COMMAND:
+    mv example.txt renamed_example.txt
+EXPLANATION:
+    Renames example.txt to renamed_example.txt.
+
+COMMAND:
+    cat /etc/passwd
+EXPLANATION:
+    Displays the entire content of /etc/passwd.
+
+COMMAND:
+    head -n 5 /etc/passwd
+EXPLANATION:
+    Shows the first 5 lines of /etc/passwd.
+
+COMMAND:
+    tail -n 5 /etc/passwd
+EXPLANATION:
+    Shows the last 5 lines of /etc/passwd.
+
+COMMAND:
+    grep "root" /etc/passwd
+EXPLANATION:
+    Searches and prints lines containing 'root'.
+
+COMMAND:
+    zip -r test_dir.zip test_dir
+EXPLANATION:
+    Compresses directory test_dir into test_dir.zip.
+
+COMMAND:
+    unzip test_dir.zip -d unzipped_dir
+EXPLANATION:
+    Extracts test_dir.zip into unzipped_dir.
+
+COMMAND:
+    wget https://example.com/sample.txt
+EXPLANATION:
+    Downloads sample.txt from the given URL using wget.
+
+COMMAND:
+    touch secure.txt
+EXPLANATION:
+    Creates an empty file secure.txt.
+
+COMMAND:
+    chmod 444 secure.txt
+EXPLANATION:
+    Makes secure.txt read-only for all users.
+
+COMMAND:
+    export MY_VAR="Hello, Linux!"
+EXPLANATION:
+    Sets an environment variable MY_VAR.
