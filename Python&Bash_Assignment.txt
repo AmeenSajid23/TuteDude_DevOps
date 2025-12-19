@@ -1,0 +1,93 @@
+Q1. Grade Checker using nested if statements
+Code : print('Hello, welcome to the Grade Checker! Please enter your score below.')
+score = int(input('Enter your score (0-100):'))
+if score >= 90:
+    print('Your grade is "A".')
+elif score >=80 and score <=89:
+    print('Your grade is "B".')
+elif score >=70 and score <=79:
+    print('Your grade is "C".')
+elif score >=60 and score <=69:
+    print('Your grade is "D".')
+else:
+    print('Your grade is "F".')
+----------------------------------------------------------
+Q2. Student Grades using dictionary and other operations
+code: # Dictionary to store student names and grades
+students = {}
+
+
+while True: # Infinite loop to allow multiple operations
+    print("\n--- Student Grade Manager ---")
+    print("1. Add new student and grade")
+    print("2. Update existing student grade")
+    print("3. Print all student grades")
+    print("4. Exit")
+
+
+    choice = input("Enter your choice (1-4): ")
+
+
+    # Option 1: Add new student
+    if choice == "1":
+        name = input("Enter student name: ")
+        grade = input("Enter student grade: ")
+
+
+        students[name] = grade
+        print(f"Student {name} added successfully.")
+
+
+    # Option 2: Update existing student
+    elif choice == "2":
+        name = input("Enter student name to update: ")
+
+
+        if name in students:
+            new_grade = input("Enter new grade: ")
+            students[name] = new_grade
+            print(f"Grade updated for {name}.")
+        else:
+            print("Student not found.")
+
+    # Option 3: Print all students
+    elif choice == "3":
+        if not students:
+            print("No student records available.")
+        else:
+            print("\nStudent Grades:")
+            for name, grade in students.items():
+                print(f"{name}: {grade}")
+
+    # Option 4: Exit
+    elif choice == "4":
+        print("Exiting program.")
+        break
+
+
+    else:
+        print("Invalid choice. Please enter 1-4.")
+
+----------------------------------------------------------------------
+
+Q3. Write to a File
+code: 
+with open ("datafile.txt", "x") as f:
+    f.write("This is a sample file.\n")
+    f.write("It contains multiple lines of text.\n")
+    f.write("This file is created for demonstration purposes.\n")
+    f.write("You can read from and write to this file using Python.\n")
+    f.write("End of the sample file.\n")
+    if f.write == True:
+        print("File created and data written successfully.")    
+    f.close()
+---------------------------------------------------------------------
+
+Q4. Read a file
+Code:
+with open ("datafile.txt", "r") as f:
+    content = f.read()
+    print(content)
+
+
+
