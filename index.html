@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sign Up</title>
+    <style>
+        :root{
+            --bg:#f3f7fb;
+            --card:#fff;
+            --accent:#3b82f6;
+            --muted:#6b7280;
+            --radius:12px;
+            --shadow: 0 6px 24px rgba(15,23,42,.08);
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        }
+        html,body{height:100%}
+        body{
+            margin:0;
+            background:
+                linear-gradient(180deg, rgba(59,130,246,.06), transparent 40%),
+                var(--bg);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            padding:24px;
+            color:#0f172a;
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+        }
+
+        .card{
+            width:100%;
+            max-width:420px;
+            background:var(--card);
+            border-radius:var(--radius);
+            box-shadow:var(--shadow);
+            padding:28px;
+            box-sizing:border-box;
+            border:1px solid rgba(15,23,42,.04);
+        }
+
+        h1{
+            margin:0 0 12px;
+            font-size:20px;
+            letter-spacing:-0.2px;
+        }
+        p.lead{
+            margin:0 0 20px;
+            color:var(--muted);
+            font-size:14px;
+        }
+
+        form .field{
+            display:flex;
+            flex-direction:column;
+            gap:8px;
+            margin-bottom:14px;
+        }
+        label{
+            font-size:13px;
+            color:#111827;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"]{
+            padding:12px 14px;
+            border-radius:10px;
+            border:1px solid rgba(15,23,42,.08);
+            background:#fff;
+            outline:none;
+            font-size:14px;
+            transition:box-shadow .12s, border-color .12s;
+        }
+        input:focus{
+            box-shadow:0 6px 18px rgba(59,130,246,.08);
+            border-color:var(--accent);
+        }
+
+        .actions{
+            display:flex;
+            flex-direction:column;
+            gap:10px;
+            margin-top:6px;
+        }
+
+        button[type="submit"]{
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            gap:8px;
+            padding:12px 14px;
+            background:var(--accent);
+            color:white;
+            border:none;
+            border-radius:10px;
+            font-weight:600;
+            cursor:pointer;
+            font-size:15px;
+            transition:transform .08s ease, box-shadow .08s;
+        }
+        button[type="submit"]:hover{ transform:translateY(-1px); box-shadow:0 8px 24px rgba(59,130,246,.14) }
+        .secondary{
+            background:transparent;
+            color:var(--accent);
+            border:1px solid rgba(59,130,246,.12);
+            padding:10px 12px;
+            border-radius:10px;
+            font-weight:600;
+            cursor:pointer;
+        }
+
+        .muted{
+            margin:12px 0 0;
+            font-size:13px;
+            color:var(--muted);
+            text-align:center;
+        }
+        .muted a{ color:var(--accent); text-decoration:none; font-weight:600; }
+
+        @media (max-width:420px){
+            .card{ padding:18px; border-radius:10px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="card" role="region" aria-label="Sign up">
+        <h1>Create an account</h1>
+        <p class="lead">Quick and simple sign up. We'll never share your info.</p>
+
+        <form method="post" action="/submit" autocomplete="on">
+
+            <p>Today is: {{ day_of_week }}</p>
+            <p>Current time is: {{ current_time }}</p>
+
+            <div class="field">
+                <label for="name">Full name</label>
+                <input id="name" name="name" type="text" required placeholder="Alex Morgan" />
+            </div>
+
+            <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required placeholder="you@example.com" />
+            </div>
+
+            <div class="field">
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" minlength="6" required placeholder="At least 6 characters" />
+            </div>
+
+            <div class="field">
+                <label for="confirm">Confirm password</label>
+                <input id="confirm" name="confirm_password" type="password" minlength="6" required placeholder="Repeat your password" />
+            </div>
+
+            {% if error %}
+            <p style="color:#dc2626; font-size:13px; margin-bottom:10px;">{{ error }}</p>
+            {% endif %}
+
+            <div class="actions">
+                <button type="submit">Create account</button>
+            </div>
+
+            <p class="muted">Already have an account hooman? <a href="/login">Log in</a></p>
+        </form>
+    </div>
+</body>
+</html>

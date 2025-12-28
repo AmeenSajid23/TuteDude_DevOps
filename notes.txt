@@ -1,0 +1,8 @@
+4 main types of Databases
+
+1. Relational Database - Databases > tables > rows > columns (MySQL, Postgres, Oracle, SQL Server)
+2. NOSQL/Document Databases - Databases > Collections > documents (MongoDB, CouchDB)
+3. Graph Databases - Databases > nodes > edges (Neo4)
+4. key-value databses - Databases > keys > values (Redis)
+
+5. Blob stores - Databases > blobs (Amazon S3, GCP Stoorage)
