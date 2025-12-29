@@ -1,0 +1,14 @@
+git init
+git add <file name>
+git add .
+git status
+git log
+git restore --staged <file name>
+git commit -a
+git commit <file> ????
+git config --global user.name <UserName>
+git config --global user.email <email>
+git log --oneline --decorate --graph --all
+git log --stat 
+git diff <commit id>
+git reset --hard <commit id>
