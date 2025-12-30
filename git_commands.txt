@@ -16,4 +16,4 @@ git branch <branchname>
 git branch -a
 git switch <branch name>
 git checkout -b <newbranch>
-git 
+git
