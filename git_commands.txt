@@ -12,3 +12,7 @@ git log --oneline --decorate --graph --all
 git log --stat 
 git diff <commit id>
 git reset --hard <commit id>
+git branch <branchname>
+git branch -a
+git switch <branch name>
+git checkout -b <newbranch>
