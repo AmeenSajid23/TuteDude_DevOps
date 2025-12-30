@@ -19,3 +19,4 @@ git checkout -b <newbranch>
 git stash
 git stash apply
 git stash drop
+git stash clear
