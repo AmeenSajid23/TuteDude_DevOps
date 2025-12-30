@@ -20,3 +20,4 @@ git stash
 git stash apply
 git stash drop
 git stash clear
+git stash pop
