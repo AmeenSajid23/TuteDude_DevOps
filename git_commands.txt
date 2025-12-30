@@ -18,4 +18,4 @@ git switch <branch name>
 git checkout -b <newbranch>
 git stash
 git stash apply
-git
+git stash drop
